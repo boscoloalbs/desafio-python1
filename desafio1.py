@@ -11,7 +11,7 @@ menu = """
 #Variáveis 
 saldo = 0 
 limite = 500
-extrato = [""]
+extrato = []
 numero_saques = 0 
 LIMITE_SAQUES = 3 
 i = LIMITE_SAQUES
@@ -49,7 +49,8 @@ while True:
     #Operação de Extrato
     elif opcao == "e":
         print("\n================= Extrato ===================")
-        print(f"\n -> {extrato}")
+        for item in extrato:
+            print(f"\n -> {item}")
         print("\nSaldo: R$ {:.2f}" .format(saldo))
         print("=============================================")
 
